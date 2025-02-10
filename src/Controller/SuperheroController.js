@@ -16,6 +16,10 @@ const addSuperhero = async (request, response) => {
     // Destructure expected superhero properties from the request body
     const { name, superpower, humility_score } = request.body;
 
+    if(humility_score < 0 || humility_score > 10) {
+        return response.status(HttpStatusCodes.BAD_REQUEST).send("humility_score should be between 0 and 10");
+    }
+
     try {
         // Add superhero to the in-memory database
         superherosDB.push({
