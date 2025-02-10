@@ -26,3 +26,5 @@ A superhero-themed project that allows users to explore, search, and interact wi
     npm start
 5. Start the development server:
     npm run dev
+6. Start the Test:
+    npm test
